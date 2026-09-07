@@ -2,7 +2,7 @@
 
 **Vectorix** — Python trading engine and strategy collection for Polymarket 5-minute and 15-minute crypto Up/Down markets.
 
-<img width="1536" height="1024" alt="Polymarket Vectorix bot dashboard" src="https://github.com/user-attachments/assets/71b65c58-00d2-4bbe-8b6d-8ed6fc9812e4" />
+<img width="1536" height="1024" alt="Vectorix Polymarket trading bot dashboard" src="docs/assets/vectorix-hero-dashboard.png" />
 
 This repository is the Vectorix Polymarket trading bot: market discovery (Gamma), live CLOB books, probability-vs-price scoring, and paper execution with hard risk caps.
 
@@ -36,8 +36,7 @@ Designed for arbitrage, directional strategies, and ultra-short-term markets (in
 ## Demo Video
 
 
-[<img width="628" height="416" alt="Polymarket Vectorix trading bot video" src="https://github.com/user-attachments/assets/21826595-774e-4ed6-84d6-b421a19aff5e" />
-](https://www.youtube.com/watch?v=Yp3gpNXF2RA)
+<img width="628" height="416" alt="Vectorix Polymarket trading bot video" src="docs/assets/vectorix-video-thumb.png" />
 
 
 
@@ -116,9 +115,9 @@ Vectorix builds automated trading systems for Polymarket: CLOB microstructure, s
 
 Public Polymarket accounts used to review bot PnL:
 
-<img width="705" height="166" alt="Polymarket public account" src="https://github.com/user-attachments/assets/61a7c1f2-26bf-458a-b180-b8649dde33a6" />
+<img width="705" height="166" alt="Vectorix Polymarket public account" src="docs/assets/vectorix-account-1.png" />
 
-<img width="705" height="166" alt="Polymarket public account 2" src="https://github.com/user-attachments/assets/a272e6c9-478d-445a-90bb-6b2d0d29245f" />
+<img width="705" height="166" alt="Vectorix Polymarket public account 2" src="docs/assets/vectorix-account-2.png" />
 
 
 ## 1. Polymarket Momentum Arbitrage bot (Twap-60s Available) (Introduction)
@@ -153,8 +152,7 @@ With approximately $2,500 recommended starting capital, the bot is optimized for
 And you can watch this bot running video with this.
 
 
-[<img width="1801" height="874" alt="ma-bot-6" src="https://github.com/user-attachments/assets/8d2c7930-bdcd-4aaa-8a82-95bc33404ace" />
-](https://www.youtube.com/watch?v=0g81khaRjkE)
+<img width="1801" height="874" alt="Vectorix momentum arbitrage bot running" src="https://github.com/user-attachments/assets/8d2c7930-bdcd-4aaa-8a82-95bc33404ace" />
 
 ---
 
@@ -477,81 +475,21 @@ This repository contains multiple automated trading strategies for Polymarket pr
 
 
 ---
-## 📚 Polymarket Trading Bot – Articles & Technical Guides
+## 📚 Polymarket Trading Bot – Technical Guides
 
-This project is part of a larger ecosystem explaining how a **Polymarket trading bot** works, including strategy, architecture, and implementation.
+This **Vectorix** (`vectorix-cross`) project covers how a Polymarket trading bot is designed: strategy, architecture, and Python implementation.
 
- 
-- ⚙️ **How to build a Polymarket trading bot (Dev.to)**  
-  Full developer guide covering setup, API integration, and execution flow.
+Topics in this repository:
 
+- TWAP reversal, TWAP-60s momentum, and TWAP 99 sniper flows
+- BTC liquidity-momentum and 5-minute Up/Down market structure
+- Ladder, stair, dual-side, and 101-cent market-making
+- CLOB V2 execution, WebSockets, latency, and risk caps
+- Paper engine in `src/vectorix_polymarket` (Gamma + CLOB, no live keys)
 
-    - [How to make the Polymarket TWAP Reversal Trading Bot: Detecting Short-Term Reversal Opportunities](https://dev.to/benjamin_cup/how-to-make-the-polymarket-twap-reversal-trading-bot-detecting-short-term-reversal-opportunities-2p89)
+Code and strategy notes: [github.com/vectorix-cross/My-Polymarket-trading-bot-python](https://github.com/vectorix-cross/My-Polymarket-trading-bot-python)
 
-    - [Building a Polymarket Trading Bot: Arbitrage + Momentum Strategy (Twap-60s Available)](https://dev.to/benjamin_cup/building-a-polymarket-trading-bot-arbitrage-momentum-strategy-twap-60s-available-4b1a)
-
-    - [Building a Probability-Driven Polymarket TWAP Trading Bot](https://dev.to/benjamin_cup/building-a-probability-driven-polymarket-twap-trading-bot-mij)
-
-    - [How to Build a Polymarket TWAP 99 Sniper Bot](https://dev.to/benjamin_cup/how-to-build-a-polymarket-twap-99-sniper-bot-3fld)
-
-    - [Building a Polymarket TWAP Momentum Trading Bot for 5-Minute Crypto Markets](https://dev.to/benjamin_cup/building-a-polymarket-twap-momentum-trading-bot-for-5-minute-crypto-markets-2efo)
-
-    - [Building a BTC Liquidity Momentum Bot for Polymarket with Python](https://dev.to/benjamin_cup/building-a-btc-liquidity-momentum-bot-for-polymarket-with-python-1m58)
-
-    - [What I Learned After Running a Live 5-Minute Polymarket Crypto Trading Bot](https://dev.to/benjamin_cup/what-i-learned-after-running-a-live-5-minute-polymarket-crypto-trading-bot-20ea)
-
-    - [How Hedge Funds Use Prediction Market Data to Extract Alpha (A Complete Roadmap)](https://dev.to/benjamin_cup/how-hedge-funds-use-prediction-market-data-to-extract-alpha-a-complete-roadmap-10hh)
-
-    - [I Thought Crypto Would Explode After Going Quiet. The Data Proved Me Wrong. (Building a Polymarket Trading Bot)](https://dev.to/benjamin_cup/i-thought-crypto-would-explode-after-going-quiet-the-data-proved-me-wrong-building-a-polymarket-4gdi)
-
-    - [I Thought Crypto Would Explode After Going Quiet. The Data Proved Me Wrong. (Building a Polymarket Trading Bot)](https://dev.to/benjamin_cup/i-thought-crypto-would-explode-after-going-quiet-the-data-proved-me-wrong-building-a-polymarket-4gdi)
-
-    - [How Quant Traders Extracted Nearly $40M in Risk-Free Arbitrage from Polymarket](https://dev.to/benjamin_cup/how-quant-traders-extracted-nearly-40m-in-risk-free-arbitrage-from-polymarket-33o8)
-
-    - [Polymarket Trading Bot: Building an Inventory-Balanced Ladder Strategy with Python in 2026](https://dev.to/benjamin_cup/polymarket-trading-bot-building-an-inventory-balanced-ladder-strategy-with-python-in-2026-53fh)
-
-    - [Polymarket Trading bot: Building a Professional Prediction Market Trading System in Python](https://dev.to/benjamin_cup/polymarket-trading-bot-building-a-professional-prediction-market-trading-system-in-python-4fjd)
-
-    - [How to Build a Polymarket Trading Bot: 5-Minute Market Momentum Trading Bot (Python Deep Dive)](https://dev.to/benjamin_cup/how-to-build-a-polymarket-trading-bot-5-minute-market-momentum-trading-bot-python-deep-dive-1bdm)
-
-    - [6 Main Types of Trading Bots on Up/Down Markets on Polymarket](https://dev.to/benjamin_cup/6-main-types-of-trading-bots-on-updown-markets-on-polymarket-4lpj)
-
-    - [How to Build a Polymarket Trading Bot: Important Problems Most Developers Discover Too Late](https://dev.to/benjamin_cup/how-to-build-a-polymarket-trading-bot-important-problems-most-developers-discover-too-late-2jg5)
-
-    - [How to Build a Polymarket Trading bot: 5-Minute Crypto Up/Down Market Trading Bot in Python](https://dev.to/benjamin_cup/how-to-build-a-polymarket-trading-bot-5-minute-crypto-updown-market-trading-bot-in-python-4ck3)
-  
-    - [Polymarket Trading Bot Tutorial: Architecture, Strategy, and Implementation](https://dev.to/benjamin_cup/polymarket-trading-bot-tutorial-architecture-strategy-and-implementation-3f8c)
- 
-    - [Implementing Adaptive Order Routing in Python for a Polymarket Trading bot: Advanced Market-Making and Execution Strategies](https://dev.to/benjamin_cup/implementing-adaptive-order-routing-in-python-for-a-polymarket-trading-bot-advanced-market-making-35pi)
- 
-    - [Building a Liquidity Monitoring Engine for a Polymarket Trading bot: Architecture, Strategy, and Real-Time Market Intelligence](https://dev.to/benjamin_cup/building-a-liquidity-monitoring-engine-for-a-polymarket-trading-bot-architecture-strategy-and-2nko)
- 
-    - [Building a Polymarket Trading bot in Python: Simulating Order Book Behavior and Automating Prediction Market Trading](https://dev.to/benjamin_cup/building-a-polymarket-trading-bot-in-python-simulating-order-book-behavior-and-automating-150j)
- 
-    - [Creating a Latency Monitoring Dashboard for Polymarket Trading Bots](https://dev.to/benjamin_cup/creating-a-latency-monitoring-dashboard-for-polymarket-trading-bots-36a6)
- 
-    - [Building a Polymarket Trading Bot Framework in Python](https://dev.to/benjamin_cup/building-a-polymarket-trading-bot-framework-in-python-42mm)
- 
-    - [Optimizing WebSocket Processing for High-Speed Market Data with Polymarket CLOB](https://dev.to/benjamin_cup/optimizing-websocket-processing-for-high-speed-market-data-with-polymarket-clob-20dg)
- 
-    - [Designing a Low-Latency Trading Architecture for Polymarket CLOB V2](https://dev.to/benjamin_cup/designing-a-low-latency-trading-architecture-for-polymarket-clob-v2-1943)
- 
-    - [How Polymarket Orders Actually Execute in CLOB V2: A Developer's Deep Dive](https://dev.to/benjamin_cup/how-polymarket-orders-actually-execute-in-clob-v2-a-developers-deep-dive-e6e)
- 
-    - [How to use API to build a Polymarket Trading Bot in Python](https://dev.to/benjamin_cup/how-to-use-api-to-build-a-polymarket-trading-bot-in-python-38h3)
- 
-    - [Live Lessons From Running a 5-Minute Polymarket Crypto Bot](https://dev.to/benjamin_cup/live-lessons-from-running-a-5-minute-polymarket-crypto-bot-273m)
- 
-    - [Building a High-Frequency Event-Driven Trading Bot for Polymarket](https://dev.to/benjamin_cup/building-a-high-frequency-event-driven-trading-bot-for-polymarket-3lnh)
- 
-    - [Polymarket Trading Bots : Collaborative Momentum Agents](https://dev.to/benjamin_cup/polymarket-trading-bots-collaborative-momentum-agents-1lhe)
- 
-    - [Signal-Based Crypto Polymarket Trading Bots: Why Manual Execution Still Outperforms Full Automation](https://dev.to/benjamin_cup/signal-based-crypto-polymarket-trading-bots-why-manual-execution-still-outperforms-full-automation-2l3j)
- 
-    - [Building a Polymarket Trading Bot for Short-Term Reversal Events](https://dev.to/benjamin_cup/building-a-polymarket-trading-bot-for-short-term-reversal-events-5eib)
- 
-    - [Building a Stable 15-Minute Trading Bot for Polymarket Crypto Up/Down Markets](https://dev.to/benjamin_cup/building-a-stable-15-minute-trading-bot-for-polymarket-crypto-updown-markets-12ie)
-
+Portfolio: [github.com/vectorix-cross](https://github.com/vectorix-cross)
 
 ---
 ## SEO Keywords
