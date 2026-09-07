@@ -15,8 +15,9 @@ dependencies = [
   "python-dotenv>=1.0.1",
 ]
 
-[project.scripts]
-vectorix-polymarket = "vectorix_polymarket.cli:main"
+[project.urls]
+Homepage = "https://github.com/vectorix-cross/My-Polymarket-trading-bot-python"
+Repository = "https://github.com/vectorix-cross/My-Polymarket-trading-bot-python"
 
 [tool.setuptools.packages.find]
 where = ["src"]
