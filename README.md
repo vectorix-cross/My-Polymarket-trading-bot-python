@@ -33,13 +33,6 @@ If you want a custom strategy or a production deployment, contact Vectorix.
 
 Designed for arbitrage, directional strategies, and ultra-short-term markets (including 5-minute and 15-minute rounds), this bot framework provides a robust foundation for building and scaling automated trading strategies on Polymarket .
 
-## Demo Video
-
-
-<img width="628" height="416" alt="Vectorix Polymarket trading bot video" src="docs/assets/vectorix-video-thumb.png" />
-
-
-
 ## Paper engine (this repo)
 
 ```bash
@@ -134,7 +127,7 @@ With approximately $2,500 recommended starting capital, the bot is optimized for
 
 
 
-<img width="1536" height="1024" alt="polymarket Arbitrage Momentum bot" src="https://github.com/user-attachments/assets/90775627-4222-4d74-822e-1f295d1af12c" />
+<img width="1536" height="1024" alt="Vectorix Polymarket Arbitrage Momentum bot" src="docs/assets/vectorix-momentum.png" />
 
 <img width="300" height="160" alt="ma-bot-1" src="https://github.com/user-attachments/assets/12b6d8a2-cb71-4f53-a602-b495031166b4" />
 
@@ -146,13 +139,6 @@ With approximately $2,500 recommended starting capital, the bot is optimized for
 
 <img width="808" height="176" alt="ma-bot-5" src="https://github.com/user-attachments/assets/baea0866-ee90-4f77-ba10-364715979e85" />
 
-
----
-
-And you can watch this bot running video with this.
-
-
-<img width="1801" height="874" alt="Vectorix momentum arbitrage bot running" src="https://github.com/user-attachments/assets/8d2c7930-bdcd-4aaa-8a82-95bc33404ace" />
 
 ---
 
@@ -169,7 +155,7 @@ When a high-confidence reversal signal is detected, the bot automatically enters
 
 The goal is to capture short-term inefficiencies created by sudden market reversals while maintaining systematic, data-driven execution.
 
-<img width="1536" height="1024" alt="Polymarket Twap Reversal Bot" src="https://github.com/user-attachments/assets/b966db29-89f7-49a2-bad3-bc4cddb02425" />
+<img width="1536" height="1024" alt="Vectorix Polymarket Twap Reversal Bot" src="docs/assets/vectorix-twap.png" />
 
 
 
@@ -185,9 +171,9 @@ The goal is to capture short-term inefficiencies created by sudden market revers
 
 This Polymarket TWAP winning token sniper bot targets short-duration (5- and 15-minute) crypto prediction markets on Polymarket, sniping the high-probability winning token near resolution when the underlying asset has clearly moved away from the reference price. It confirms direction using both live spot price and Chainlink TWAP, estimates win probability, and only buys when the executable order-book price still offers positive expected edge after costs. Strict risk checks, data freshness validation, and latency-aware execution keep the strategy systematic rather than a simple “buy the winner” approach.
 
-<img width="1168" height="784" alt="polymarket-TWAP-Token-Sniper" src="https://github.com/user-attachments/assets/3e063383-e572-4543-9985-a132a26a6ca6" />
+<img width="1168" height="784" alt="Vectorix polymarket-TWAP-Token-Sniper" src="docs/assets/vectorix-sniper1.png" />
 
-<img width="1536" height="1024" alt="Polymarket TWAP Winning-Token Sniper Bot" src="https://github.com/user-attachments/assets/98f853b8-73a6-46cc-af83-939a7b8f5f0d" />
+<img width="1536" height="1024" alt="Vectorix Polymarket TWAP Winning-Token Sniper Bot" src="docs/assets/vectorix-sniper2.png" />
 
 ---
 ### Result Screenshot
@@ -202,12 +188,7 @@ This Polymarket TWAP winning token sniper bot targets short-duration (5- and 15-
 ## 4. Polymarket Endcycle Sniper bot (Introduction)
 
 Polymarket Endcycle Sniper Bot is an automated trading system designed to monitor short-duration prediction markets and execute high-probability trades near the end of each 5-minute epoch. It connects to the orderbook in real time, triggers buys when prices exceed a configured threshold (e.g., 0.95), manages risk with optional exits or hedging, and redeems winning positions automatically after market resolution. 🚀📈
-<img width="1098" height="728" alt="polymarket-endcycle-sniper-bot" src="https://github.com/user-attachments/assets/f2f83308-c9cd-4c71-9cf6-10fcbe8e1e63" />
-
-
-### Recording Video
-
-https://github.com/user-attachments/assets/b038aa3b-e42b-4f72-ac5d-a130cdb56a9f
+<img width="1098" height="728" alt="Vectorix polymarket-endcycle-sniper-bot" src="docs/assets/vectorix-endcycle.png" />
 
 ---
 ### Running Bot Screenshot
@@ -244,7 +225,7 @@ https://github.com/user-attachments/assets/b038aa3b-e42b-4f72-ac5d-a130cdb56a9f
 
 BTC Liquidity Momentum Arbitrage Bot is a Polymarket trading bot that monitors the BTC 5-minute Up/Down markets by analyzing real-time order book liquidity instead of relying only on price movements. It detects sudden shifts in buying or selling pressure using an order-book influence metric and confirms the signal with the difference between the live Bitcoin spot price and the market's strike price before placing its first trade (Buy1). After the initial order is filled, the bot immediately attempts to buy the opposite side (Buy2) at a calculated complementary price so the combined position costs about $0.95 while redeeming for $1.00 at market settlement. Rather than acting as a last-second sniper, This is a market microstructure strategy that exploits temporary liquidity imbalances and order-flow inefficiencies throughout most of the five-minute trading window.
 
-<img width="1536" height="1024" alt="BTC liquidity momentum bot" src="https://github.com/user-attachments/assets/a5179323-d92c-40a7-ba26-e9760012daba" />
+<img width="1536" height="1024" alt="Vectorix BTC liquidity momentum bot" src="docs/assets/vectorix-liq.png" />
 
 ### Result Screenshort
 
@@ -260,7 +241,7 @@ Polymarket BTC & ETH Hug Bot is a signal-driven trading system designed for shor
 
 The system combines real-time market monitoring, signal analysis, and automated execution to capture recurring market inefficiencies. Historical testing and live observations have demonstrated a consistently high win rate, making the bot a specialized framework for researching and trading momentum-driven prediction market opportunities.
 
-<img width="1536" height="1024" alt="Polymarket-BTC-ETH-HUG-Bot" src="https://github.com/user-attachments/assets/ebbc4c31-0587-4b25-889f-39b8f8825ed1" />
+<img width="1536" height="1024" alt="Vectorix Polymarket-BTC-ETH-HUG-Bot" src="docs/assets/vectorix-hug.png" />
 
 ### Result Screenshort
 
@@ -283,7 +264,7 @@ A trading bot for Polymarket’s 5-minute BTC markets that exploits the relation
 systematically capture inefficiencies, achieving a consistently high win rate under defined conditions.
 
 
-<img width="1024" height="683" alt="Polymarket-Trading-Bot-5m-price-field" src="https://github.com/user-attachments/assets/64bb8b58-8599-4bfd-962f-bbb9489ce519" />
+<img width="1024" height="683" alt="Vectorix Polymarket-Trading-Bot-5m-price-field" src="docs/assets/vectorix-pricefield.png" />
 
 ### Result Screenshort
 
@@ -305,7 +286,7 @@ Polymarket Sticky Trading Bot is an automated trading system that exploits short
 
 market signals (e.g., YES > 0.9) to identify lagging markets, executing trades that capture the rapid convergence as probabilities realign.
 
-<img width="1020" height="677" alt="Polymarket-Trading-Bot-Sticky" src="https://github.com/user-attachments/assets/41dcf35b-14dd-444d-9f87-fbb2ea6464da" />
+<img width="1020" height="677" alt="Vectorix Polymarket-Trading-Bot-Sticky" src="docs/assets/vectorix-sticky.png" />
 
 ## Result Screenshot
 
@@ -328,11 +309,7 @@ An open-source bot that automatically copies trades from top Polymarket traders 
 
 Whether you're new to prediction markets or you want to scale your copy-trading across multiple wallets, this bot is built to be **simple to run**, **transparent**, and **under your control**.
 
-<img width="1100" height="726" alt="polymarket-copy-trading-bot" src="https://github.com/user-attachments/assets/82243a0b-f4ec-47f0-b7cd-326e0b0e2a27" />
-
-### Recording Video
-
-https://github.com/user-attachments/assets/1bf1babc-8aa6-4be0-b1ec-4e193f52b965
+<img width="1100" height="726" alt="Vectorix polymarket-copy-trading-bot" src="docs/assets/vectorix-copy.png" />
 
 ---
 
@@ -341,7 +318,7 @@ https://github.com/user-attachments/assets/1bf1babc-8aa6-4be0-b1ec-4e193f52b965
 Polymarket Arbitrage Lost token Sniper bot automates a trading workflow on Polymarket short-interval markets (e.g., BTC/ETH/SOL/XRP 5-minute “up/down” epochs). It allocates capital into YES and NO positions, monitors order books in real time, and strategically exits the predicted losing side token before market resolution to optimize returns. The core edge lies in the model’s ability to accurately identify the losing token, enabling consistent profit capture when combined prices exceed $1.
 
 
-<img width="1082" height="718" alt="polymarket-trading-bot-lost-token-sniper" src="https://github.com/user-attachments/assets/a664f94a-ea48-4080-a3e3-972e295d27d1" />
+<img width="1082" height="718" alt="Vectorix polymarket-trading-bot-lost-token-sniper" src="docs/assets/vectorix-lost.png" />
 
 ### Result Screenshort
 <img width="804" height="447" alt="polymarket-trading-bot-lost-token-sniper" src="https://github.com/user-attachments/assets/0582e172-fea6-4986-af78-4d8ddc4c85d9" />
@@ -355,7 +332,7 @@ Polymarket Arbitrage Lost token Sniper bot automates a trading workflow on Polym
 ## 11. Polymarket Arbitrage Bot (101 cents Sniper) : (Introduction)
 
 Polymarket Arbitrage 101 Bot is a professional Polymarket liquidity maker bot designed for short-interval (e.g., 5-minute) binary markets, automating the full cycle of splitting USDC into YES/NO tokens, placing balanced limit orders, and dynamically managing positions in real time. It targets a consistent edge by structuring trades so each YES/NO pair aims to return a combined value of 1.01 (101 cents) per cycle, while applying adaptive adjustments and risk controls as market conditions evolve. Built for multi-chain compatibility and continuous 24/7 operation, it supports live, dry-run, and paper trading modes for both production use and safe strategy testing.
-<img width="1124" height="742" alt="Polymarket-trading-bot-arbitrage-101" src="https://github.com/user-attachments/assets/73737f09-ba30-4955-85a2-057e84b0ef3d" />
+<img width="1124" height="742" alt="Vectorix Polymarket-trading-bot-arbitrage-101" src="docs/assets/vectorix-arb101.png" />
 
 ### Result Screenshort
 
@@ -377,7 +354,7 @@ If you invest $100, you can earn average $190 to $220 per day on one chain, and 
 This Polymarket trading bot explores an automated volatility and probability arbitrage bot designed to identify pricing inefficiencies in prediction markets. Instead of predicting outcomes, the system exploits mispriced probabilities, market imbalances, and short-term volatility using quantitative models and automation. By combining high-frequency execution with strong risk management and hedging, the bot aims to capture small statistical edges and compound them over large trade volumes. 🚀
 
 
-<img width="1071" height="709" alt="Polymarket Arbitrage Bot dual side" src="https://github.com/user-attachments/assets/c40f12cc-a205-4091-a0f6-bdd443580943" />
+<img width="1071" height="709" alt="Vectorix Polymarket Arbitrage Bot dual side" src="docs/assets/vectorix-dual.png" />
 
 
 ### Result Screenshot
@@ -390,11 +367,7 @@ This Polymarket trading bot explores an automated volatility and probability arb
 This bot does not speculate on market direction.
 Instead, it captures spread by selling both YES and NO outcome tokens at prices whose combined value exceeds $1.
 The strategy focuses on market making, not directional trading.
-<img width="1098" height="727" alt="Polymarket Arbitrage Bot Ladder" src="https://github.com/user-attachments/assets/69f7c1d7-20c6-4b30-928b-5df382795c8a" />
-
-### Recording Video
-
-https://github.com/user-attachments/assets/7ba03ed4-f00d-4564-bf78-67c5159bb5c3
+<img width="1098" height="727" alt="Vectorix Polymarket Arbitrage Bot Ladder" src="docs/assets/vectorix-ladder.png" />
 
 ---
 ### Result Screenshot
@@ -408,7 +381,7 @@ Execution begins with the selective liquidation of the side offering the most fa
 
 This execution framework is underpinned by a robust risk management architecture and dynamic hedging mechanisms, enabling controlled exposure, reduced volatility, and consistent capital preservation. The overall design prioritizes efficient exits, minimized slippage, and stable, repeatable performance across varying market conditions.
 
-<img width="1024" height="681" alt="Polymarket Arbitrage Bot Stair Trading" src="https://github.com/user-attachments/assets/e8da9cfc-1d3e-4100-a014-d45697c11deb" />
+<img width="1024" height="681" alt="Vectorix Polymarket Arbitrage Bot Stair Trading" src="docs/assets/vectorix-stair.png" />
 
 
 ### Result Screenshot
@@ -419,7 +392,7 @@ This execution framework is underpinned by a robust risk management architecture
 
 Polymarket Momentum Trading Bot is an automated trading system designed for short-duration crypto prediction markets, using real-time momentum analysis, price inefficiency detection, and probabilistic signals to execute high-precision trades. The bot includes advanced risk management, dynamic position sizing, and hedge logic to minimize downside risk while targeting stable and consistent profitability.
 
-<img width="1394" height="911" alt="Polymarket Arbitrage Bot Momentum Trading" src="https://github.com/user-attachments/assets/b6421b12-aa3d-4ae8-9d53-245c4ca1a024" />
+<img width="1394" height="911" alt="Vectorix Polymarket Arbitrage Bot Momentum Trading" src="docs/assets/vectorix-mom2.png" />
 
 
 ### Result Screenshot
@@ -448,28 +421,8 @@ Vectorix maintains this repository as an open-source resource for:
 
 This repository contains multiple automated trading strategies for Polymarket prediction markets:
 
-<img width="1536" height="1024" alt="How to make the polymarket trading bot" src="https://github.com/user-attachments/assets/1c0d4f5a-20fe-47f5-8d6b-35ba0c3584c6" />
+<img width="1536" height="1024" alt="How to make the polymarket trading bot" src="docs/assets/vectorix-howto.png" />
 
-<img width="1024" height="1536" alt="How to trader make the profit in 2026" src="https://github.com/user-attachments/assets/63de867f-92e8-4b04-8a9b-a77f22146b61" />
-
-<img width="1070" height="710" alt="5min-polymarket-trading-bot2" src="https://github.com/user-attachments/assets/851edd70-e4b1-4e59-bc04-11562feab10d" />
-
-<img width="1306" height="1204" alt="polymarket-cascading-Trading-strategy" src="https://github.com/user-attachments/assets/b6b5ecb1-35bc-4428-8fb8-b4b0807db20c" />
-
-<img width="1536" height="1024" alt="BUILDING A HIGH-FREQUENCY EVENT-DRIVEN TRADING BOT FOR POLYMARKET" src="https://github.com/user-attachments/assets/6d07d69e-de1b-4c31-85a4-1216c11ac658" />
-
-<img width="1024" height="1536" alt="Polymarket-Latency-15min-arbitrage-bot" src="https://github.com/user-attachments/assets/37634721-0d07-4435-ad9d-79fec11f2d7e" />
-
-<img width="1536" height="1024" alt="Single-Based-polymarket-trading-bot" src="https://github.com/user-attachments/assets/f2b97e74-6abc-4197-b39f-93057fb82be7" />
-
-
-<img width="1536" height="1024" alt="polymarket 15min edge" src="https://github.com/user-attachments/assets/bd1ab902-625c-484a-94a2-7dca01bf9033" />
-
-<img width="1536" height="1024" alt="Polymarket Arbitrage Trading Bot" src="https://github.com/user-attachments/assets/da6fe2aa-7d8f-4468-9c2e-06fc5937d4e0" />
-
-<img width="1536" height="1024" alt="Polymarket trading bot market sleep" src="https://github.com/user-attachments/assets/21106581-8e39-4c07-8729-7473f5c23596" />
-
-<img width="1536" height="1024" alt="4min edge" src="https://github.com/user-attachments/assets/f9f8cfa8-a859-44a9-9c54-91d0b7fdc6b3" />
 
 
 
