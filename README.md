@@ -129,15 +129,15 @@ With approximately $2,500 recommended starting capital, the bot is optimized for
 
 <img width="1536" height="1024" alt="Vectorix Polymarket Arbitrage Momentum bot" src="docs/assets/vectorix-momentum.png" />
 
-<img width="300" height="160" alt="ma-bot-1" src="https://github.com/user-attachments/assets/12b6d8a2-cb71-4f53-a602-b495031166b4" />
+<img width="300" height="160" alt="ma-bot-1" src="docs/assets/vectorix-r1.png" />
 
-<img width="300" height="160" alt="ma-bot-2" src="https://github.com/user-attachments/assets/7f4a1b74-e122-4c05-95cb-ee0d4be55926" />
+<img width="300" height="160" alt="ma-bot-2" src="docs/assets/vectorix-r2.png" />
 
-<img width="300" height="160" alt="ma-bot-3" src="https://github.com/user-attachments/assets/507b63f4-6fb4-48a1-8ca8-07e01a2fc035" />
+<img width="300" height="160" alt="ma-bot-3" src="docs/assets/vectorix-r3.png" />
 
-<img width="800" height="169" alt="ma-bot-4" src="https://github.com/user-attachments/assets/b58631eb-b0ac-4751-9c51-55d887dc5f08" />
+<img width="800" height="169" alt="ma-bot-4" src="docs/assets/vectorix-r4.png" />
 
-<img width="808" height="176" alt="ma-bot-5" src="https://github.com/user-attachments/assets/baea0866-ee90-4f77-ba10-364715979e85" />
+<img width="808" height="176" alt="ma-bot-5" src="docs/assets/vectorix-r5.png" />
 
 
 ---
@@ -159,10 +159,10 @@ The goal is to capture short-term inefficiencies created by sudden market revers
 
 
 
-<img width="830" height="479" alt="tr-1" src="https://github.com/user-attachments/assets/2d269064-d4a9-487a-9b97-e8f98882d641" />
+<img width="830" height="479" alt="tr-1" src="docs/assets/vectorix-r6.png" />
 
 
-<img width="884" height="501" alt="tr-2" src="https://github.com/user-attachments/assets/ad3d6ea7-90f9-4194-a40a-5b8447976589" />
+<img width="884" height="501" alt="tr-2" src="docs/assets/vectorix-r7.png" />
 
 
 ---
@@ -179,10 +179,10 @@ This Polymarket TWAP winning token sniper bot targets short-duration (5- and 15-
 ### Result Screenshot
 
 
-<img width="836" height="801" alt="polymarket_twap_win_token_sniper_1" src="https://github.com/user-attachments/assets/2453efc9-f98a-4220-bf38-7bddf027c73b" />
+<img width="836" height="801" alt="polymarket_twap_win_token_sniper_1" src="docs/assets/vectorix-r8.png" />
 
 
-<img width="774" height="778" alt="polymarket_twap_win_token_sniper_2" src="https://github.com/user-attachments/assets/e07016d0-88b2-4047-a619-09739237894e" />
+<img width="774" height="778" alt="polymarket_twap_win_token_sniper_2" src="docs/assets/vectorix-r9.png" />
 
 
 ## 4. Polymarket Endcycle Sniper bot (Introduction)
@@ -193,32 +193,32 @@ Polymarket Endcycle Sniper Bot is an automated trading system designed to monito
 ---
 ### Running Bot Screenshot
 
-<img width="1796" height="937" alt="Polymarket-end-cycle-sniper-trading-bot" src="https://github.com/user-attachments/assets/6b5f2782-a0f8-4333-9727-7699cd88c839" />
+<img width="1796" height="937" alt="Polymarket-end-cycle-sniper-trading-bot" src="docs/assets/vectorix-r10.png" />
 
-<img width="1796" height="930" alt="Polymarket-end-cycle-sniper-trading-bot" src="https://github.com/user-attachments/assets/13d4b57a-7268-4102-ba28-93017026884f" />
+<img width="1796" height="930" alt="Polymarket-end-cycle-sniper-trading-bot" src="docs/assets/vectorix-r11.png" />
 
 ---
 ### Result Screenshot
 
-<img width="1384" height="895" alt="Polymarket-end-cycle-sniper-trading-bot" src="https://github.com/user-attachments/assets/e95f5fd9-df93-4d8f-be58-bee7568619c0" />
+<img width="1384" height="895" alt="Polymarket-end-cycle-sniper-trading-bot" src="docs/assets/vectorix-r12.png" />
 
-<img width="1489" height="920" alt="Polymarket-end-cycle-sniper-trading-bot" src="https://github.com/user-attachments/assets/33237de3-cd03-4a27-9c78-13455b925572" />
+<img width="1489" height="920" alt="Polymarket-end-cycle-sniper-trading-bot" src="docs/assets/vectorix-r13.png" />
 
 ### 1 week Profit.
 
-<img width="793" height="806" alt="Polymarket-end-cycle-sniper-trading-bot" src="https://github.com/user-attachments/assets/8ee8dcc9-dabe-4629-9e05-0a12270dbed9" />
+<img width="793" height="806" alt="Polymarket-end-cycle-sniper-trading-bot" src="docs/assets/vectorix-r14.png" />
 
-<img width="748" height="829" alt="Polymarket-end-cycle-sniper-trading-bot" src="https://github.com/user-attachments/assets/b96b80c9-ec50-4120-a025-5aff0fc3b4d3" />
+<img width="748" height="829" alt="Polymarket-end-cycle-sniper-trading-bot" src="docs/assets/vectorix-r15.png" />
 
-<img width="772" height="743" alt="Polymarket-end-cycle-sniper-trading-bot" src="https://github.com/user-attachments/assets/edd0286a-97ad-4c14-8420-7a6e73ea2a52" />
+<img width="772" height="743" alt="Polymarket-end-cycle-sniper-trading-bot" src="docs/assets/vectorix-r16.png" />
 
-<img width="794" height="697" alt="Polymarket-end-cycle-sniper-trading-bot" src="https://github.com/user-attachments/assets/8795b273-4ecc-4e97-8094-8dd62ed32570" />
+<img width="794" height="697" alt="Polymarket-end-cycle-sniper-trading-bot" src="docs/assets/vectorix-r17.png" />
 
-<img width="790" height="887" alt="Polymarket-end-cycle-sniper-trading-bot" src="https://github.com/user-attachments/assets/4d2b2887-2562-46ae-a5b4-20e1a3837bbe" />
+<img width="790" height="887" alt="Polymarket-end-cycle-sniper-trading-bot" src="docs/assets/vectorix-r18.png" />
 
-<img width="777" height="534" alt="Polymarket-end-cycle-sniper-trading-bot" src="https://github.com/user-attachments/assets/fb9b61f2-e68a-43be-a595-50cb2b656713" />
+<img width="777" height="534" alt="Polymarket-end-cycle-sniper-trading-bot" src="docs/assets/vectorix-r19.png" />
 
-<img width="800" height="901" alt="Polymarket-end-cycle-sniper-trading-bot" src="https://github.com/user-attachments/assets/06c67109-5400-4183-b7c4-6a043df8f1e5" />
+<img width="800" height="901" alt="Polymarket-end-cycle-sniper-trading-bot" src="docs/assets/vectorix-r20.png" />
 ---
 
 ## 5. Polymarket 5min BTC Liquidity Momentum Arbitrage Bot
@@ -229,10 +229,10 @@ BTC Liquidity Momentum Arbitrage Bot is a Polymarket trading bot that monitors t
 
 ### Result Screenshort
 
-<img width="914" height="825" alt="polymarket-5min-liquidity-Momentum-bot-2" src="https://github.com/user-attachments/assets/54a8490b-9767-4845-a54f-d8ba0c865220" />
+<img width="914" height="825" alt="polymarket-5min-liquidity-Momentum-bot-2" src="docs/assets/vectorix-r21.png" />
 
 
-<img width="901" height="794" alt="polymarket-5min-liquidity-Momentum-bot-4" src="https://github.com/user-attachments/assets/d86c883e-8988-43c2-9d53-fb01fe6c2361" />
+<img width="901" height="794" alt="polymarket-5min-liquidity-Momentum-bot-4" src="docs/assets/vectorix-r22.png" />
 
 
 ## 6. Polymarket BTC ETH Hug Bot
@@ -245,10 +245,10 @@ The system combines real-time market monitoring, signal analysis, and automated 
 
 ### Result Screenshort
 
-<img width="712" height="766" alt="btc-eth-hug-bot" src="https://github.com/user-attachments/assets/9fe25d3e-dea3-442b-abea-d06ab4763709" />
+<img width="712" height="766" alt="btc-eth-hug-bot" src="docs/assets/vectorix-r23.png" />
 
 
-<img width="702" height="775" alt="btc-eth-hug-bot-2" src="https://github.com/user-attachments/assets/74264fcf-dd24-420e-9980-04d53dc00f57" />
+<img width="702" height="775" alt="btc-eth-hug-bot-2" src="docs/assets/vectorix-r24.png" />
 
 
 
@@ -269,13 +269,13 @@ systematically capture inefficiencies, achieving a consistently high win rate un
 ### Result Screenshort
 
 
-<img width="785" height="383" alt="Polymarket-Trading-Bot-5m-price-field" src="https://github.com/user-attachments/assets/ec8e08ce-3018-4c4d-a221-5929d300a3a8" />
+<img width="785" height="383" alt="Polymarket-Trading-Bot-5m-price-field" src="docs/assets/vectorix-r25.png" />
 
-<img width="964" height="488" alt="Polymarket-Trading-Bot-5m-price-field" src="https://github.com/user-attachments/assets/01591ade-2aa8-4254-bf4c-7b9396733656" />
+<img width="964" height="488" alt="Polymarket-Trading-Bot-5m-price-field" src="docs/assets/vectorix-r26.png" />
 
-<img width="1062" height="706" alt="Polymarket-Trading-Bot-5m-price-field" src="https://github.com/user-attachments/assets/64cc69e2-7a77-4de8-8843-8920d20aa60e" />
+<img width="1062" height="706" alt="Polymarket-Trading-Bot-5m-price-field" src="docs/assets/vectorix-r27.png" />
 
-<img width="746" height="408" alt="Polymarket-Trading-Bot-5m-price-field" src="https://github.com/user-attachments/assets/35d8cab7-fabf-4036-8a80-b1926c1d0aa1" />
+<img width="746" height="408" alt="Polymarket-Trading-Bot-5m-price-field" src="docs/assets/vectorix-r28.png" />
 
 
 ---
@@ -290,15 +290,15 @@ market signals (e.g., YES > 0.9) to identify lagging markets, executing trades t
 
 ## Result Screenshot
 
-<img width="873" height="811" alt="polymarket-trading-bot-sticky" src="https://github.com/user-attachments/assets/771edf44-97a4-4c2e-9abd-81f7a37d9817" />
+<img width="873" height="811" alt="polymarket-trading-bot-sticky" src="docs/assets/vectorix-r29.png" />
 
-<img width="698" height="613" alt="Polymarket-Trading-Bot-Sticky" src="https://github.com/user-attachments/assets/a0d4588d-af31-4f4e-a342-457ce2121449" />
+<img width="698" height="613" alt="Polymarket-Trading-Bot-Sticky" src="docs/assets/vectorix-r30.png" />
 
-<img width="793" height="681" alt="Polymarket-Trading-Bot-Sticky" src="https://github.com/user-attachments/assets/47822fd0-53f2-4629-a6f4-00052388bcc2" />
+<img width="793" height="681" alt="Polymarket-Trading-Bot-Sticky" src="docs/assets/vectorix-r31.png" />
 
-<img width="722" height="647" alt="Polymarket-Trading-Bot-Sticky" src="https://github.com/user-attachments/assets/23b7bd9e-3bd4-4447-9aae-717f517da82a" />
+<img width="722" height="647" alt="Polymarket-Trading-Bot-Sticky" src="docs/assets/vectorix-r32.png" />
 
-<img width="721" height="651" alt="Polymarket-Trading-Bot-Sticky" src="https://github.com/user-attachments/assets/492cf80d-6721-4421-a8b6-6e8ce54da751" />
+<img width="721" height="651" alt="Polymarket-Trading-Bot-Sticky" src="docs/assets/vectorix-r33.png" />
 
 
 ---
@@ -321,11 +321,11 @@ Polymarket Arbitrage Lost token Sniper bot automates a trading workflow on Polym
 <img width="1082" height="718" alt="Vectorix polymarket-trading-bot-lost-token-sniper" src="docs/assets/vectorix-lost.png" />
 
 ### Result Screenshort
-<img width="804" height="447" alt="polymarket-trading-bot-lost-token-sniper" src="https://github.com/user-attachments/assets/0582e172-fea6-4986-af78-4d8ddc4c85d9" />
+<img width="804" height="447" alt="polymarket-trading-bot-lost-token-sniper" src="docs/assets/vectorix-r34.png" />
 
-<img width="787" height="435" alt="polymarket-trading-bot-lost-token-sniper" src="https://github.com/user-attachments/assets/d99dbdec-e47b-4b1a-b557-3dfcc46d6576" />
+<img width="787" height="435" alt="polymarket-trading-bot-lost-token-sniper" src="docs/assets/vectorix-r35.png" />
 
-<img width="887" height="568" alt="polymarket-trading-bot-lost-token-sniper" src="https://github.com/user-attachments/assets/248087c4-faff-4d28-bb49-189009c78d89" />
+<img width="887" height="568" alt="polymarket-trading-bot-lost-token-sniper" src="docs/assets/vectorix-r36.png" />
 
 ---
 
@@ -337,10 +337,10 @@ Polymarket Arbitrage 101 Bot is a professional Polymarket liquidity maker bot de
 ### Result Screenshort
 
 Sell ​​logic typically generates 0.01 to 0.02 cents per token pair.
-<img width="1002" height="905" alt="polymarket arbitrage trading bot" src="https://github.com/user-attachments/assets/cd6486fd-d95b-4359-ab82-a2d9ea8f67cc" />
+<img width="1002" height="905" alt="polymarket arbitrage trading bot" src="docs/assets/vectorix-r37.png" />
 
 Risk management brings significant profits.
-<img width="786" height="605" alt="Polymarket trading bot arbitrage 101" src="https://github.com/user-attachments/assets/1981f487-894e-4cf5-a8d6-e75f1787f712" />
+<img width="786" height="605" alt="Polymarket trading bot arbitrage 101" src="docs/assets/vectorix-r38.png" />
 
 ### The most important point is that this bot never incurs a loss and only generates profit.
 
@@ -359,7 +359,7 @@ This Polymarket trading bot explores an automated volatility and probability arb
 
 ### Result Screenshot
 
-<img width="1011" height="355" alt="Polymarket Arbitrage Bot dual side" src="https://github.com/user-attachments/assets/19a2cdd8-8702-4bd4-b71f-eeee40fead6d" />
+<img width="1011" height="355" alt="Polymarket Arbitrage Bot dual side" src="docs/assets/vectorix-r39.png" />
 
 ---
 
@@ -372,7 +372,7 @@ The strategy focuses on market making, not directional trading.
 ---
 ### Result Screenshot
 
-<img width="1803" height="861" alt="Polymarket Arbitrage Bot Ladder " src="https://github.com/user-attachments/assets/6b9c55c5-f822-46ff-b956-ec9939736653" />
+<img width="1803" height="861" alt="Polymarket Arbitrage Bot Ladder " src="docs/assets/vectorix-r40.png" />
 
 # 14. Polymarket Arbitrage Bot (Stair Trading) : (Introduction)
 The Stair Arbitrage Bot is designed to optimize position unwinding within Polymarket’s short-duration markets, with a particular focus on the final phase of each 5-minute interval. As markets approach resolution, the system executes a disciplined and liquidity-aware exit strategy across both YES and NO positions.
@@ -386,7 +386,7 @@ This execution framework is underpinned by a robust risk management architecture
 
 ### Result Screenshot
 
-<img width="1164" height="592" alt="Polymarket Arbitrage Bot Stair Trading" src="https://github.com/user-attachments/assets/049a6632-22cb-4469-9bfe-7d81fa713096" />
+<img width="1164" height="592" alt="Polymarket Arbitrage Bot Stair Trading" src="docs/assets/vectorix-r41.png" />
 
 ## 15. Polymarket Arbitrage Bot (Momentum Trading) : (Introduction)
 
@@ -398,7 +398,7 @@ Polymarket Momentum Trading Bot is an automated trading system designed for shor
 ### Result Screenshot
 
 
-<img width="993" height="771" alt="Polymarket Arbitrage Bot Momentum Trading" src="https://github.com/user-attachments/assets/89221d44-abef-4d1b-8c06-470646120bad" />
+<img width="993" height="771" alt="Polymarket Arbitrage Bot Momentum Trading" src="docs/assets/vectorix-r42.png" />
 
 
 
