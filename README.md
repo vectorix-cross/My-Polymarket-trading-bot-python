@@ -1,16 +1,25 @@
-# Polymarket Trading Bot | Polymarket Arbitrage Bot | Polymarket TWAP Trading Bot
+# Vectorix Polymarket Trading Bot
 
-**Vectorix** — Polymarket automation in two engines: a Python Gamma/CLOB paper scanner, and a TypeScript multi-wallet platform (8 strategies, whale tracker, dashboard).
+**Vectorix (`vectorix-cross`)** — research-backed automation for Polymarket CLOB markets. Two runnable engines in this repo, plus a documented strategy history from 5-minute crypto epochs through whale copy-trade and market-making.
 
 <img width="1536" height="1024" alt="Vectorix Polymarket trading bot dashboard" src="docs/assets/vectorix-hero-dashboard.png" />
 
-This repository is the Vectorix Polymarket trading bot. The **TypeScript** stack in `apps/node` is the full platform: isolated wallets, concurrent strategies, whale discovery, risk caps, and a live dashboard. The **Python** package in `src/vectorix_polymarket` is the lightweight paper scanner (Gamma + CLOB + edge).
+| What you can run today | What this README also documents |
+| --- | --- |
+| **TypeScript platform** in [`apps/node`](apps/node) — 8 strategies, whale scanner, risk, paper fills, SSE dashboard | Fifteen specialized bots (TWAP sniper, hug, ladder, stair, 101-cent MM, …) from live research and prior deployments |
+| **Python paper scanner** in [`src/vectorix_polymarket`](src/vectorix_polymarket) — Gamma + CLOB + edge score | Ten strategy boards: cascade trailing, late-window, blackout confirmation, latency arb, order-flow, and more |
 
-Strategy catalog screenshots and architecture notes stay below for 5-minute / 15-minute Up/Down research.
+Public clone is **paper-first**. `enable_live_trading` is `false`. Keys stay in `.env`, never in git. This is not a promise of profit: fees, slippage, and oracle timing eat thin edges.
 
-Live wallet signing is off in this public cut. Paper first. Keys stay in `.env`, never in git.
+**Want the bot on your wallet, a custom strategy, or a production VPS?** Message Vectorix — that is how most serious users work with this stack.
 
-If you want a custom strategy or a production deployment, contact Vectorix.
+| Channel | Link |
+|---------|------|
+| **Email** | [vanjasretenovic4@gmail.com](mailto:vanjasretenovic4@gmail.com) |
+| **Telegram** | [@vectoris_corss](https://t.me/vectoris_corss) |
+| **Discord** | [vectorix-cross](https://discord.com/users/775389898794336316) |
+| **X** | [@vectorix_cross](https://x.com/vectorix_cross) |
+| **GitHub** | [vectorix-cross](https://github.com/vectorix-cross) |
 
 ---
 
@@ -111,69 +120,19 @@ src/vectorix_polymarket/
   config.py   env
 ```
 
-## Features (catalog)
+## How Vectorix thinks about Polymarket
 
-- Explosive growth of Polymarket with surging trading volume and new short-term markets
-  
-- Increasing dominance of automated bots and AI in 5-minute and 15-minute crypto prediction markets
-  
-- Higher profitability potential through advanced arbitrage and market-making strategies
-  
-- Stronger edge for Python-based bots with real-time orderbook intelligence and low-latency execution
-  
-- Continuous evolution of sniper, ladder, stair, momentum, and copy trading strategies
-  
-- Scalable daily profits as prediction markets move toward hundreds of billions in annual volume
-  
-- Full future-proof architecture for new features, contracts, and high-frequency trading environments
+Polymarket is a market of expectations: YES/NO shares, $1 at resolution, prices as implied probability, liquidity until the clock hits zero. The edge is rarely a single “UP” call. It is **structure** — sum-to-one gaps, late-window information, order-flow confirmation, time decay, and execution quality.
 
-## Included Trading Bots
+Work on this stack follows a fixed order:
 
-Designed for arbitrage, directional strategies, and ultra-short-term markets (including 5-minute and 15-minute rounds), this bot framework provides a robust foundation for building and scaling automated trading strategies on Polymarket .
+1. Map the market (5m / 15m crypto, CLOB depth, oracle source).
+2. Define a rule that can be skipped more often than it is taken.
+3. Paper the fill, spread, and time-stop.
+4. Size from edge and book, not from conviction.
+5. Only then discuss live keys, VPS placement, and custom wiring.
 
-## Documentation
-Notes and write-ups from building and running these systems, aimed at developers, traders, and researchers who want to understand prediction-market automation in practice.
-
-My content covers a wide range of topics, including:
-
-📈 Polymarket trading strategies and market analysis
-
-🤖 Step-by-step tutorials for building automated Polymarket trading bots
-
-🐍 Python-based implementations and code examples
-
-⚡ Real-time data collection, monitoring, and execution systems
-
-📊 Statistical and quantitative approaches to market opportunities
-
-🧠 AI-assisted trading ideas and automation workflows
-
-🛡️ Risk management techniques and portfolio considerations
-
-🔍 Research on market inefficiencies, pricing behavior, and trading opportunities
-
-🏗️ Architecture design for scalable trading infrastructure
-
-💡 Experimental ideas, trading frameworks, and open-source tools that others can build upon
-
-Whether you're a beginner trying to understand how prediction market bots work, a Python developer looking for implementation examples, or an experienced trader exploring automation, you'll find practical resources, code, tutorials, and detailed explanations that go beyond theory.
-
-📚 Explore the Content
-
-Portfolio:
-[https://github.com/vectorix-cross](https://github.com/vectorix-cross)
-
-## Contact
-
-Vectorix builds automated trading systems for Polymarket: CLOB microstructure, short-interval crypto markets, and risk-capped execution. Custom strategy work and collaboration are available.
-
-| Channel | Link |
-|---------|------|
-| **Email** | [vanjasretenovic4@gmail.com](mailto:vanjasretenovic4@gmail.com) |
-| **Telegram** | [@vectoris_corss](https://t.me/vectoris_corss) |
-| **Discord** | [vectorix-cross](https://discord.com/users/775389898794336316) |
-| **X (Twitter)** | [@vectorix_cross](https://x.com/vectorix_cross) |
-| **GitHub** | [vectorix-cross](https://github.com/vectorix-cross) |
+That sequence is why clients hire Vectorix: strategy plus engineering, not a black-box “set and forget” claim.
 
 Public Polymarket accounts used to review bot PnL:
 
@@ -181,6 +140,79 @@ Public Polymarket accounts used to review bot PnL:
 
 <img width="956" height="168" alt="Polymarket public account 2" src="docs/assets/vectorix-account-2.png" />
 
+---
+
+## Strategy history (research playbook)
+
+These boards are the **logical history** of how Vectorix designs short-interval crypto markets. They are research and teaching artifacts. The TypeScript engine implements the eight strategies in the table above (arb, mispricing, convergence, MM, momentum, AI forecast, copy-trade, custom). The numbered bots **1–15** later in this README are the specialized lineage (snipers, hug, ladder, stair). Ask if you want a research board wired into `apps/node` as a live module.
+
+Read top to bottom: first the market, then microstructure, then confirmation, then human control.
+
+### A. How money is actually made (2026)
+
+Trade YES/NO. Pay $1 if you are right. Price is crowd probability. Liquidity until resolution. Recurring edges: **sum-to-one arb**, **tail-end / high-prob**, **market making**, **model vs book**, **momentum / mispricing**. Automation wins on scan speed and discipline — not on guessing headlines.
+
+<img width="1536" alt="How traders make money on Polymarket — Vectorix strategy board" src="docs/assets/vectorix-strat-2026.jpg" />
+
+### B. Event-driven 5-minute engine
+
+Queue of ticks: spot, strike gap, difference rate, book, time left. Entry is a **sequence** (3–4 ticks of acceleration and persistence), not one print. Exits: liquidity collapse, time exposure, adverse move. Goal is execution quality, not trade count.
+
+<img width="1536" alt="High-frequency event-driven Polymarket bot — Vectorix" src="docs/assets/vectorix-strat-hft.jpg" />
+
+### C. Cascade trailing (5-minute)
+
+Wide trail while the trade develops (entry to +1–2%), moderate lock-in at +3–5%, tight extraction at +6% or exhaustion. Time layer: permissive 0–2m, tighter 2–4m, aggressive last minute. Capture edge without giving the whole move back.
+
+<img width="1536" alt="Cascade trailing logic for 5-minute Polymarket crypto — Vectorix" src="docs/assets/vectorix-strat-cascade.jpg" />
+
+### D. Late window, streak, sum-to-one
+
+Three complementary late-cycle ideas: Chainlink vs strike in the last seconds (buy YES ~0.90–0.95 when spot already decides); fade long identical streaks; **FOK buy both** when YES+NO bids sum under $1. Size 2–5% per trade; daily 5% drawdown kill switch.
+
+<img width="1536" alt="Late-window, streak reversal, and sum-to-one arb — Vectorix" src="docs/assets/vectorix-strat-latewindow.jpg" />
+
+### E. Final-seconds BTC / ETH arb
+
+Last seconds of the 5-minute epoch. Compare Chainlink strike to Polymarket-implied spot. Require **BTC and ETH to agree**, liquidity, tight spread, two-plus confirming ticks. Fast exit, second-scale time-stop, crash filter, then wait for the next epoch.
+
+<img width="1536" alt="Final-seconds BTC ETH arbitrage — Vectorix" src="docs/assets/vectorix-strat-finalsec.jpg" />
+
+### F. Blackout: confirm, do not predict
+
+Across 9,010 five-minute windows (BTC, ETH, SOL): a “blackout” (all three move &lt; 0.05%) is common (~18.6%). Silence predicts **more silence**, not a coil. Stacked blackouts cut big-move odds further. When silence **does** break (&gt;0.10%), the three coins agree on direction ~98% of the time. SOL often leads; BTC/ETH follow. The trade is confirming direction faster than the book, not forecasting the wake-up.
+
+<img width="1536" alt="Blackout confirmation strategy — Vectorix" src="docs/assets/vectorix-strat-blackout.jpg" />
+
+### G. Binance order flow vs the 4-minute leader
+
+At 240s, the 5-minute leader is not enough. On 2,833 BTC/ETH/SOL markets the raw 4-minute leader was ~57.6%. **Price + Binance taker flow aligned** ~70.2%; **diverged** ~41.3%. Follow when aligned, fade when not; still skip unless model probability beats the ask plus a margin. Edge is EV vs the live book, not win rate alone.
+
+<img width="1536" alt="Binance taker flow vs 4-minute Polymarket leader — Vectorix" src="docs/assets/vectorix-strat-flow.jpg" />
+
+### H. Latency / oracle lag (15-minute)
+
+Spot (Binance/Coinbase) moves first; Polymarket and the oracle lag (often seconds to under a minute). Detect fast spot vs flat odds, compute true vs market probability, enter only if EV clears a few percent. Prefer mid-window (about 5–10 minutes), take-profit 0.80–0.95, time-stop if the lag closes against you. Temporal edge — reaction, not prophecy.
+
+<img width="1536" alt="Latency arbitrage on 15-minute Polymarket crypto — Vectorix" src="docs/assets/vectorix-strat-latency.jpg" />
+
+### I. Open-window 15-minute BTC (session filter)
+
+One focused window: first 15 minutes of the US cash open (example 9:00–9:15 ET). Three filters must agree (macro risk-on/off, RSI, MACD). Enter near 0.50, target 0.80–0.89, exit inside the window — **no need to hold to resolution**. Skip if any filter is red.
+
+<img width="1536" alt="15-minute open-window BTC strategy — Vectorix" src="docs/assets/vectorix-strat-open15.jpg" />
+
+### J. Signal engine, human execution
+
+5-minute BTC/USDT structure with Binance lead as information. Automation: data, indicators, scan, alert. Human: context, news, size, skip. Full auto is faster; human-in-the-loop is better when the regime changes. The bot is a tool — risk/reward, sizing, and frequency still decide the account.
+
+<img width="1536" alt="Signal-based bot with human confirmation — Vectorix" src="docs/assets/vectorix-strat-signal.jpg" />
+
+---
+
+## Specialized bot catalog (lineage 1–15)
+
+Each entry below is a **named system** Vectorix has specified, papered, or run: TWAP-60s momentum, reversals, snipers, hug, sticky, copy, lost-token, 101-cent MM, dual-side, ladder, stair. Screenshots are from those campaigns. They are not all compiled as separate packages in `apps/node`; they are the catalog clients pick from when commissioning a build.
 
 ## 1. Polymarket Momentum Arbitrage bot (Twap-60s Available) (Introduction)
 
@@ -399,17 +431,13 @@ Polymarket Arbitrage 101 Bot is a professional Polymarket liquidity maker bot de
 
 ### Result Screenshort
 
-Sell ​​logic typically generates 0.01 to 0.02 cents per token pair.
+Sell logic aims for a small complementary edge per YES/NO pair (on the order of a cent or two after costs when the book cooperates).
 <img width="1002" height="905" alt="polymarket arbitrage trading bot" src="docs/assets/vectorix-r37.png" />
 
-Risk management brings significant profits.
+Risk caps and inventory limits matter more than raw fill count.
 <img width="786" height="605" alt="Polymarket trading bot arbitrage 101" src="docs/assets/vectorix-r38.png" />
 
-### The most important point is that this bot never incurs a loss and only generates profit.
-
-This bot generated a profit of 101 to 102 cents per token pair from 1$ in the 5-minute crypto market and completed an average of 190 successful trades per day.
-
-If you invest $100, you can earn average $190 to $220 per day on one chain, and approximately $850 to $900 per day if you invest across four chains.
+No 101-cent cycle is risk-free. Inventory, fees, and one-sided fills can erase the theoretical 1¢. Treat campaign screenshots as history of a specific book, not a daily-return formula. Vectorix will size and paper this with you before any live wallet.
 
 ---
 
@@ -466,23 +494,16 @@ Polymarket Momentum Trading Bot is an automated trading system designed for shor
 
 
 ---
-## Why This Repository
+## Why work with Vectorix
 
-Vectorix maintains this repository as an open-source resource for:
+This repository is the public face of a practitioner stack: CLOB microstructure, 5- and 15-minute crypto epochs, whale scoring, and risk-capped paper execution. You get runnable engines plus a written history of every major bot Vectorix has specified.
 
-- Polymarket trading bots
-- prediction market automation
-- crypto arbitrage systems
-- AI-powered trading strategies
-- quantitative trading research
-- algorithmic crypto trading
+Hire Vectorix when you want a playbook strategy (or a new one) wired into `apps/node`, wallet isolation and a kill switch on a low-latency VPS, honest paper results before live USDC, and ongoing parameter work.
 
 
 ---
 
-## Strategy Overview
-
-This repository contains multiple automated trading strategies for Polymarket prediction markets:
+Architecture notes from the same research line:
 
 <img width="1536" height="1024" alt="How to make the polymarket trading bot" src="docs/assets/vectorix-howto.png" />
 
@@ -491,53 +512,29 @@ This repository contains multiple automated trading strategies for Polymarket pr
 
 
 ---
-## 📚 Polymarket Trading Bot – Technical Guides
-
-This **Vectorix** (`vectorix-cross`) project covers how a Polymarket trading bot is designed: strategy, architecture, and Python implementation.
-
-Topics in this repository:
-
-- TWAP reversal, TWAP-60s momentum, and TWAP 99 sniper flows
-- BTC liquidity-momentum and 5-minute Up/Down market structure
-- Ladder, stair, dual-side, and 101-cent market-making
-- CLOB V2 execution, WebSockets, latency, and risk caps
-- Paper engine in `src/vectorix_polymarket` (Gamma + CLOB, no live keys)
-
-Code and strategy notes: [github.com/vectorix-cross/My-Polymarket-trading-bot-python](https://github.com/vectorix-cross/My-Polymarket-trading-bot-python)
-
-Portfolio: [github.com/vectorix-cross](https://github.com/vectorix-cross)
+**Start here:** [Telegram @vectoris_corss](https://t.me/vectoris_corss) · [vanjasretenovic4@gmail.com](mailto:vanjasretenovic4@gmail.com) · [github.com/vectorix-cross](https://github.com/vectorix-cross)
 
 ---
-## SEO Keywords
 
-Polymarket trading bot, Polymarket arbitrage bot, AI trading bot, prediction market bot, crypto arbitrage bot, automated trading system, algorithmic trading Python, Polymarket API Python, market-making bot, OpenAI trading bot, Polymarket trading Strategy, automated Trading System Architecture
-
----
 ## Roadmap
 
-- Build Strong Profitable Strategy
-
-- Reinforcement learning trading agents
-
-- Telegram trading alerts
-
-- Multi-market arbitrage engine
-
-- Advanced AI forecasting models
-
-- Cloud deployment automation
-
-- Real-time analytics dashboard
+- Adaptive parameters and regime classification on the Node engine
+- Optional Telegram alerts from the paper/live risk layer
+- Deeper EV filters (flow + blackout + late-window) as first-class strategies
+- Deployment notes for Polygon RPC and VPS placement
 
 ---
+
 ## Contributing
 
-Contributions, pull requests, and strategy ideas are welcome.
+Issues and strategy notes are welcome. For paid integration or a private fork, use Telegram or email.
 
 ## Author
 
-Vectorix (`vectorix-cross`) · Novi Sad, Serbia · [vanjasretenovic4@gmail.com](mailto:vanjasretenovic4@gmail.com)
+**Vectorix** (`vectorix-cross`) · Novi Sad, Serbia · [vanjasretenovic4@gmail.com](mailto:vanjasretenovic4@gmail.com)
 
 ## License
 
 MIT License
+
+Trading involves risk of loss. Fees, slippage, and resolution timing can remove a paper edge. This repository is software and research, not financial advice.

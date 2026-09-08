@@ -11,7 +11,7 @@
 [![Docker](https://img.shields.io/badge/Docker-Ready-2496ED?logo=docker&logoColor=white)](Dockerfile)
 [![Lines of Code](https://img.shields.io/badge/Lines%20of%20Code-53%2C776-informational)](src/)
 
-**7 trading strategies · 🐋 whale tracker & copy-trade simulator · 📊 real-time dashboard · 🔒 paper trading by default**
+**8 trading strategies · whale tracker & copy-trade simulator · real-time dashboard · paper trading by default**
 
 [Features](#-features) · [Quick Start](#-quick-start) · [Strategies](#-strategies) · [Whale Scanner](#-whale-tracking--scanner) · [Dashboard](#-real-time-dashboard) · [Configuration](#%EF%B8%8F-configuration) · [API Reference](#-api-endpoints) · [Custom Development](#-custom-bot-development)
 
@@ -19,7 +19,7 @@
 
 <img src="docs/screenshots/dashboard.png" alt="Polymarket Trading Bot Dashboard — Real-time P&L tracking, 10 wallets, 8 strategies, whale scanner" width="100%" />
 
-*Real-time dashboard showing 10 active wallets, $72,800 total capital, $39,240 total P&L, and 7 concurrent strategies running in paper trading mode.*
+*Paper dashboard: isolated wallets, live P&L, concurrent strategies, and the whale scanner. Figures on the screenshot are from a paper session, not a live-capital guarantee.*
 
 </div>
 
@@ -27,7 +27,7 @@
 
 ## 📖 Overview
 
-A production-grade, modular trading system for [Polymarket](https://polymarket.com) prediction markets. Run **7 concurrent strategies** — from cross-market arbitrage to AI-driven forecasting — each isolated in its own wallet with independent capital, risk limits, and execution modes (LIVE or PAPER).
+A modular trading system for [Polymarket](https://polymarket.com) prediction markets. Run **8 concurrent strategies** — from cross-market arbitrage to AI-driven forecasting — each isolated in its own wallet with independent capital, risk limits, and execution modes (LIVE or PAPER).
 
 The platform includes an enterprise-level **whale tracking engine** that auto-discovers profitable traders, scores them with regime-adaptive algorithms, detects coordinated whale clusters, and lets you simulate copy-trading their moves — all from a beautiful real-time dashboard.
 
