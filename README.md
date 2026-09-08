@@ -108,9 +108,9 @@ Vectorix builds automated trading systems for Polymarket: CLOB microstructure, s
 
 Public Polymarket accounts used to review bot PnL:
 
-<img width="705" height="166" alt="Vectorix Polymarket public account" src="docs/assets/vectorix-account-1.png" />
+<img width="956" height="184" alt="Polymarket public account" src="docs/assets/vectorix-account-1.png" />
 
-<img width="705" height="166" alt="Vectorix Polymarket public account 2" src="docs/assets/vectorix-account-2.png" />
+<img width="956" height="168" alt="Polymarket public account 2" src="docs/assets/vectorix-account-2.png" />
 
 
 ## 1. Polymarket Momentum Arbitrage bot (Twap-60s Available) (Introduction)
