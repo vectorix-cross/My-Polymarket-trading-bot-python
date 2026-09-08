@@ -129,15 +129,9 @@ With approximately $2,500 recommended starting capital, the bot is optimized for
 
 <img width="1536" height="1024" alt="Vectorix Polymarket Arbitrage Momentum bot" src="docs/assets/vectorix-momentum.png" />
 
-<img width="300" height="160" alt="ma-bot-1" src="docs/assets/vectorix-r1.png" />
+<img width="764" height="328" alt="Vectorix Polymarket profit and loss" src="docs/assets/vectorix-r-pnl.png" />
 
-<img width="300" height="160" alt="ma-bot-2" src="docs/assets/vectorix-r2.png" />
-
-<img width="300" height="160" alt="ma-bot-3" src="docs/assets/vectorix-r3.png" />
-
-<img width="800" height="169" alt="ma-bot-4" src="docs/assets/vectorix-r4.png" />
-
-<img width="808" height="176" alt="ma-bot-5" src="docs/assets/vectorix-r5.png" />
+<img width="900" height="376" alt="Vectorix Polymarket open positions" src="docs/assets/vectorix-r-positions.png" />
 
 
 ---
