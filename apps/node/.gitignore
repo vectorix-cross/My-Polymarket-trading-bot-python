@@ -1,0 +1,46 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+
+# Runtime data
+.runtime/
+*.db
+*.db-shm
+*.db-wal
+
+# Environment variables & secrets
+.env
+.env.*
+.env.local
+.env.production
+
+# Logs
+*.log
+/tmp/
+
+# OS files
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+
+# IDE
+.vscode/settings.json
+.idea/
+
+# Test artifacts
+tests/.test_scanner.db
+coverage/
+.nyc_output/
+
+# Temp / scratch files
+state3.txt
+sample_logs.txt
+sample_convergence_report.json
+/tmp/
+
+# Package lock (optional — keep if you want reproducible installs)
+# package-lock.json

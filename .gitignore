@@ -13,3 +13,6 @@ build/
 .idea/
 .vscode/
 docs/tmp/
+node_modules/
+apps/node/.runtime/
+apps/node/dist/

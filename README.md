@@ -1,6 +1,6 @@
 # Polymarket Trading Bot | Polymarket Arbitrage Bot | Polymarket TWAP Trading Bot
 
-**Vectorix** — Python trading engine and strategy collection for Polymarket 5-minute and 15-minute crypto Up/Down markets.
+**Vectorix** — Python paper engine plus a TypeScript multi-strategy platform for Polymarket 5-minute and 15-minute crypto Up/Down markets.
 
 <img width="1536" height="1024" alt="Vectorix Polymarket trading bot dashboard" src="docs/assets/vectorix-hero-dashboard.png" />
 
@@ -60,6 +60,29 @@ src/vectorix_polymarket/
   edge.py     candidate scoring
   paper.py    risk-capped fills
   config.py   env
+```
+
+## TypeScript engine (`apps/node`)
+
+Multi-wallet Node bot: 8 strategies, whale scanner, risk engine, paper fills, optional dashboard.
+
+```bash
+cd apps/node
+npm install
+npm test
+npm run dev
+```
+
+`config.yaml` ships with `enable_live_trading: false`. Full notes: [apps/node/README.md](apps/node/README.md).
+
+```
+apps/node/src/
+  strategies/   arb, convergence, MM, momentum, AI, copy
+  whales/       scanner, scoring, alerts
+  risk/         limits, kill switch
+  paper_trading/
+  execution/
+  reporting/    dashboard
 ```
 
 ## Documentation

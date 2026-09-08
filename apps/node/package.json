@@ -1,0 +1,36 @@
+{
+  "name": "vectorix-polymarket-node",
+  "version": "0.1.0",
+  "private": true,
+  "type": "commonjs",
+  "bin": {
+    "bot": "dist/cli.js"
+  },
+  "scripts": {
+    "dev": "tsx src/cli.ts start --config config.yaml",
+    "build": "tsc -p tsconfig.json",
+    "start": "node dist/cli.js start --config config.yaml",
+    "test": "vitest run",
+    "lint": "eslint . --ext .ts",
+    "format": "prettier --check .",
+    "typecheck": "tsc -p tsconfig.json --noEmit"
+  },
+  "dependencies": {
+    "better-sqlite3": "^12.6.2",
+    "commander": "^12.1.0",
+    "pino": "^9.3.2",
+    "pino-pretty": "^11.2.0",
+    "yaml": "^2.4.5"
+  },
+  "devDependencies": {
+    "@types/better-sqlite3": "^7.6.13",
+    "@types/node": "^22.10.2",
+    "@typescript-eslint/eslint-plugin": "^8.8.1",
+    "@typescript-eslint/parser": "^8.8.1",
+    "eslint": "^9.13.0",
+    "prettier": "^3.3.3",
+    "tsx": "^4.19.2",
+    "typescript": "^5.6.3",
+    "vitest": "^2.1.8"
+  }
+}

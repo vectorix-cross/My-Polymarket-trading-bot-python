@@ -1,0 +1,365 @@
+environment:
+  enable_live_trading: false
+
+wallets:
+  - id: live_cross_market_arb
+    mode: PAPER
+    strategy: cross_market_arbitrage
+    capital: 100
+    risk_limits:
+      max_position_size: 20
+      max_exposure_per_market: 30
+      max_daily_loss: 15
+      max_open_trades: 10
+      max_drawdown: 0.2
+
+  - id: wallet_2
+    mode: PAPER
+    strategy: ai_forecast
+    capital: 500
+
+  - id: wallet_3
+    mode: PAPER
+    strategy: market_making
+    capital: 300
+    risk_limits:
+      max_position_size: 60
+      max_exposure_per_market: 100
+      max_daily_loss: 50
+      max_open_trades: 20
+      max_drawdown: 0.2
+
+  - id: wallet_4
+    mode: PAPER
+    strategy: filtered_high_prob_convergence
+    capital: 2000
+    risk_limits:
+      max_position_size: 500
+      max_exposure_per_market: 400
+      max_daily_loss: 200
+      max_open_trades: 100
+      max_drawdown: 0.15
+
+  # ── Paper Trading Wallets ($10k each, generous risk limits) ──
+  - id: paper_cross_market_arb
+    mode: PAPER
+    strategy: cross_market_arbitrage
+    capital: 10000
+    risk_limits:
+      max_position_size: 500
+      max_exposure_per_market: 1000
+      max_daily_loss: 500
+      max_open_trades: 50
+      max_drawdown: 0.10
+
+  - id: paper_mispricing_arb
+    mode: PAPER
+    strategy: mispricing_arbitrage
+    capital: 10000
+    risk_limits:
+      max_position_size: 500
+      max_exposure_per_market: 1000
+      max_daily_loss: 500
+      max_open_trades: 50
+      max_drawdown: 0.10
+
+  - id: paper_ai_forecast
+    mode: PAPER
+    strategy: ai_forecast
+    capital: 10000
+    risk_limits:
+      max_position_size: 500
+      max_exposure_per_market: 1000
+      max_daily_loss: 500
+      max_open_trades: 50
+      max_drawdown: 0.10
+
+  - id: paper_market_making
+    mode: PAPER
+    strategy: market_making
+    capital: 10000
+    risk_limits:
+      max_position_size: 500
+      max_exposure_per_market: 1000
+      max_daily_loss: 500
+      max_open_trades: 50
+      max_drawdown: 0.10
+
+  - id: paper_momentum
+    mode: PAPER
+    strategy: momentum
+    capital: 10000
+    risk_limits:
+      max_position_size: 500
+      max_exposure_per_market: 1000
+      max_daily_loss: 500
+      max_open_trades: 50
+      max_drawdown: 0.10
+
+  - id: paper_user_defined
+    mode: PAPER
+    strategy: user_defined
+    capital: 10000
+    risk_limits:
+      max_position_size: 500
+      max_exposure_per_market: 1000
+      max_daily_loss: 500
+      max_open_trades: 50
+      max_drawdown: 0.10
+
+  - id: paper_convergence
+    mode: PAPER
+    strategy: filtered_high_prob_convergence
+    capital: 10000
+    risk_limits:
+      max_position_size: 500
+      max_exposure_per_market: 1000
+      max_daily_loss: 500
+      max_open_trades: 50
+      max_drawdown: 0.10
+
+  - id: paper_copy_trade
+    mode: PAPER
+    strategy: copy_trade
+    capital: 10000
+    risk_limits:
+      max_position_size: 500
+      max_exposure_per_market: 500
+      max_daily_loss: 500
+      max_open_trades: 30
+      max_drawdown: 0.15
+
+strategy_config:
+  cross_market_arbitrage:
+    min_edge: 0.03
+  mispricing_arbitrage:
+    min_dislocation: 0.02
+  ai_forecast:
+    refresh_minutes: 30
+  market_making:
+    spread_bps: 40
+  momentum:
+    lookback_minutes: 15
+  filtered_high_prob_convergence:
+    enabled: true
+    # ── Market selection filters ──
+    min_liquidity_usd: 10000
+    min_prob: 0.65
+    max_prob: 0.96
+    max_spread_bps: 200
+    max_days_to_resolution: 14
+    spike_pct: 0.08
+    spike_lookback_minutes: 60
+    min_depth_usd_within_1pct: 500
+    min_imbalance: 0.10
+    flow_lookback_minutes: 15
+    min_net_buy_flow_usd: 500
+    max_correlated_exposure_pct: 0.25
+    # ── Position sizing ──
+    base_risk_pct: 0.005
+    max_position_usd_per_market: 200
+    max_total_open_positions: 10
+    # ── Entry ──
+    ttl_seconds: 120
+    allow_take_on_momentum: false
+    # ── Exit ──
+    take_profit_bps: 200
+    stop_loss_bps: 150
+    time_exit_hours: 48
+    # ── Risk ──
+    max_daily_loss_pct: 0.03
+    max_weekly_drawdown_pct: 0.08
+    max_market_mle_pct: 0.05
+    max_total_mle_pct: 0.15
+    max_orders_per_minute: 10
+    max_cancel_rate: 0.5
+
+  # ── Copy Trading Strategy ──────────────────────────────────────────
+  copy_trade:
+    # Whale addresses to follow (add Polymarket proxy wallet addresses)
+    whale_addresses: []
+    # 'mirror' = same direction as whale, 'inverse' = contrarian
+    copy_mode: mirror
+    data_api_url: https://data-api.polymarket.com
+    # ── Polling ──
+    poll_interval_seconds: 30
+    max_trade_age_seconds: 120
+    # ── Whale Filters ──
+    min_trade_size_usd: 50
+    max_trade_size_usd: 100000
+    min_whale_win_rate: 0.50
+    # ── Position Sizing ──
+    size_mode: fixed                    # fixed | proportional | kelly
+    fixed_size: 10
+    proportional_factor: 0.10          # when size_mode = proportional
+    max_capital_per_trade_pct: 0.05
+    max_shares_per_order: 50
+    # ── Risk / Exposure ──
+    max_open_positions: 15
+    max_exposure_per_market_usd: 500
+    max_daily_volume_usd: 5000
+    max_drawdown_pct: 0.15
+    max_consecutive_losses: 5
+    cooldown_after_loss_seconds: 300
+    # ── Exit Parameters ──
+    take_profit_bps: 150
+    stop_loss_bps: 100
+    trailing_stop_activate_bps: 80
+    trailing_stop_distance_bps: 30
+    time_exit_minutes: 120
+    exit_on_whale_exit: true
+    # ── Filters ──
+    blacklist_markets: []
+    whitelist_markets: []
+    min_market_liquidity: 500
+    min_market_volume_24h: 1000
+
+polymarket:
+  gamma_api: https://gamma-api.polymarket.com
+  clob_api: https://clob.polymarket.com
+
+# ── Whale Tracking Engine ──────────────────────────────────────────────────
+whale_tracking:
+  enabled: true
+  dbPath: .runtime/whales.db
+
+  # Ingestion
+  pollIntervalMs: 30000
+  backfillBatchSize: 100
+  maxRequestsPerMinute: 240             # ← doubled for parallel scanning throughput
+  backoffBaseMs: 1000
+  backoffMaxMs: 60000
+
+  # Candidate discovery
+  candidateScanIntervalMs: 300000
+  candidateMinVolumeUsd24h: 5000
+  candidateMinTrades24h: 5
+  candidateAutoTrackTopK: 5
+
+  # Scoring
+  scoreVersion: "1.0.0"
+  scoreWeights:
+    profitability: 0.30
+    timingSkill: 0.20
+    lowSlippage: 0.15
+    consistency: 0.15
+    marketSelectionQuality: 0.10
+    recencyActiveness: 0.10
+  provisionalMinTrades: 30
+  provisionalMaxScore: 65
+  costBasisMethod: FIFO
+
+  # Timing windows (minutes)
+  timingWindows: [5, 30, 240, 1440]
+
+  # Alerts
+  alertDigestIntervalMs: 60000
+  largeTradeSigmaThreshold: 2.5
+  nearResolutionHours: 24
+
+  # Copy guardrails
+  copy:
+    maxCopyDelaySeconds: 120
+    maxEntryDriftBps: 50
+    maxSpreadBps: 200
+    minDepthUsd: 1000
+    minLiquidityUsd: 5000
+    maxSizePerTradeUsd: 100
+    maxSizePerMarketUsd: 500
+    maxSizePerDayUsd: 2000
+    stopCopyDrawdownPct: 0.10
+    stopCopyMinScore: 40
+    minShadowWindowDays: 7
+
+  # Reconciliation
+  reconcileIntervalMs: 86400000
+  reconcileLookbackDays: 7
+
+  # Metadata cache
+  metadataCacheTtlMs: 3600000
+
+  # Scanner — auto-discover profitable whales from liquid markets
+  scanner:
+    enabled: true
+    scanIntervalMs: 600000              # 10 minutes between scans
+    marketsPerScan: 50                  # scan top N liquid markets per cycle
+    minMarketVolume24hUsd: 10000        # skip markets below this 24h volume
+    minMarketLiquidityUsd: 10000        # skip illiquid markets
+    tradesPerMarket: 500                # max trades per page per market
+    tradePageDepth: 5                   # fetch up to 5 pages (2500 trades) per market
+    # Whale qualification thresholds
+    minAddressTrades: 5
+    minAddressVolumeUsd: 5000
+    minWinRate: 0.52
+    minRoi: -0.10
+    # Auto-tracking
+    autoPromoteEnabled: true
+    autoPromoteMinScore: 60
+    autoPromoteMaxPerScan: 10
+    # Big-trade spike detection
+    bigTradeMinUsd: 3000                # flag individual trades ≥ $3K (lowered)
+    # Cross-referencing: deep-scan top whales across all markets
+    crossRefEnabled: true
+    crossRefMaxPerBatch: 15
+    # Whale cluster detection
+    clusterDetectionEnabled: true
+    clusterMinWhales: 2                 # lowered from 3 for earlier detection
+    clusterWindowHours: 48              # widened from 24
+    # Parallel fetching (concurrent market scans — higher = faster but more API load)
+    parallelFetchBatch: 16              # ← doubled from 8 for faster scanning
+
+    # ── Multi-API Pool (rate limit bypass) ──
+    apiPool:
+      enabled: true
+      selectionStrategy: least-loaded   # round-robin | least-loaded | weighted-random
+      healthCheckIntervalMs: 120000
+      endpoints:
+        # Add custom endpoints here to multiply throughput:
+        # - name: custom-data-api
+        #   url: https://your-proxy.example.com
+        #   type: data-api
+        #   maxRequestsPerMinute: 60
+        #   weight: 8
+
+    # ── Fast-Scan Mode (near-real-time whale detection) ──
+    fastScan:
+      enabled: true
+      intervalMs: 60000                 # 60-second quick rescan
+      topMarkets: 5                     # top 5 hottest markets
+      alertMinUsd: 5000                 # alert on trades ≥ $5K
+
+    # ── Historical Backfill ──
+    backfillDays: 7                     # scan past 7 days on first run
+
+    # ── On-chain Wallet Balance Lookup ──
+    polygonRpcUrl: https://polygon-rpc.com
+    usdcContractAddress: "0x2791Bca1f2de4661ED88A30C99A7a9449Aa84174"
+
+    # ── Whale Network Graph ──
+    networkGraphEnabled: true
+
+    # ── Copy-Trade Simulator ──
+    copySimEnabled: true
+    copySimSlippageBps: 30              # assumed 30 bps slippage
+    copySimDelaySeconds: 10             # assumed 10s copy delay
+
+    # ── Regime-Adaptive Scoring ──
+    regimeAdaptiveEnabled: true
+
+    # ── Multi-Exchange Scanning ──
+    exchangeSources:
+      - exchange: polymarket
+        apiUrl: https://data-api.polymarket.com
+        enabled: true
+        maxRequestsPerMinute: 60
+      - exchange: kalshi
+        apiUrl: https://trading-api.kalshi.com/trade-api/v2
+        enabled: false
+        maxRequestsPerMinute: 30
+      - exchange: manifold
+        apiUrl: https://api.manifold.markets/v0
+        enabled: false
+        maxRequestsPerMinute: 60
+
+  # Webhook (optional — leave null to disable)
+  telegramWebhookUrl: null
