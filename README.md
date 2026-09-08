@@ -1,39 +1,88 @@
 # Polymarket Trading Bot | Polymarket Arbitrage Bot | Polymarket TWAP Trading Bot
 
-**Vectorix** — Python paper engine plus a TypeScript multi-strategy platform for Polymarket 5-minute and 15-minute crypto Up/Down markets.
+**Vectorix** — Polymarket automation in two engines: a Python Gamma/CLOB paper scanner, and a TypeScript multi-wallet platform (8 strategies, whale tracker, dashboard).
 
 <img width="1536" height="1024" alt="Vectorix Polymarket trading bot dashboard" src="docs/assets/vectorix-hero-dashboard.png" />
 
-This repository is the Vectorix Polymarket trading bot: market discovery (Gamma), live CLOB books, probability-vs-price scoring, and paper execution with hard risk caps.
+This repository is the Vectorix Polymarket trading bot. The **TypeScript** stack in `apps/node` is the full platform: isolated wallets, concurrent strategies, whale discovery, risk caps, and a live dashboard. The **Python** package in `src/vectorix_polymarket` is the lightweight paper scanner (Gamma + CLOB + edge).
 
-It is primarily intended for educational and research purposes. Strategy concepts, architecture notes, and selected performance screenshots are included so you can see how different automated approaches are designed and tested.
+Strategy catalog screenshots and architecture notes stay below for 5-minute / 15-minute Up/Down research.
 
-Live wallet signing is not enabled in this public cut. Paper first. Keys stay in `.env`, never in git.
+Live wallet signing is off in this public cut. Paper first. Keys stay in `.env`, never in git.
 
 If you want a custom strategy or a production deployment, contact Vectorix.
 
+---
 
-## Features
+## What this repo contains
 
-- Explosive growth of Polymarket with surging trading volume and new short-term markets
-  
-- Increasing dominance of automated bots and AI in 5-minute and 15-minute crypto prediction markets
-  
-- Higher profitability potential through advanced arbitrage and market-making strategies
-  
-- Stronger edge for Python-based bots with real-time orderbook intelligence and low-latency execution
-  
-- Continuous evolution of sniper, ladder, stair, momentum, and copy trading strategies
-  
-- Scalable daily profits as prediction markets move toward hundreds of billions in annual volume
-  
-- Full future-proof architecture for new features, contracts, and high-frequency trading environments
+| Path | Language | Role |
+| --- | --- | --- |
+| [`apps/node`](apps/node) | TypeScript | Multi-strategy engine, whale scanner, risk, paper fills, dashboard |
+| [`src/vectorix_polymarket`](src/vectorix_polymarket) | Python | Gamma discovery, CLOB books, edge scoring, paper session |
+| [`docs/assets`](docs/assets) | — | Vectorix screenshots and strategy graphics |
 
-## Included Trading Bots
+---
 
-Designed for arbitrage, directional strategies, and ultra-short-term markets (including 5-minute and 15-minute rounds), this bot framework provides a robust foundation for building and scaling automated trading strategies on Polymarket .
+## TypeScript platform (`apps/node`)
 
-## Paper engine (this repo)
+8 strategies · whale tracker & copy-trade simulator · real-time dashboard · paper trading by default.
+
+### Strategies
+
+| # | Strategy | Type | Edge |
+|---|----------|------|------|
+| 1 | **Cross-Market Arbitrage** | Arbitrage | Price gaps between correlated markets (3%+ min edge) |
+| 2 | **Mispricing Arbitrage** | Arbitrage | Outcome probabilities that do not sum to ~100% (2%+ dislocation) |
+| 3 | **Filtered High-Prob Convergence** | Convergence | 7-filter pipeline on 65–96% outcomes, 200 bps take profit |
+| 4 | **Market Making (Spread)** | Market making | Two-sided quotes, ~40 bps spread capture |
+| 5 | **Momentum** | Trend | 15-minute lookback continuation |
+| 6 | **AI Forecast** | Research | Web-research + model refresh |
+| 7 | **Copy Trading** | Whale mirror | Mirror or invert whale fills with size/exit rules |
+| 8 | **User-Defined** | Custom | Extend the strategy interface |
+
+### Whale tracking
+
+- Auto-discovery across liquid markets, parallel scanning
+- Scoring: profitability, timing, slippage, consistency, market selection, recency
+- Regime-adaptive scores, cluster detection, network graph
+- Copy-trade simulator (slippage + delay)
+- Alerts on large prints, SQLite whale store, Polygon USDC balance lookup
+
+### Dashboard and risk
+
+- SSE dashboard: wallets, P&L, live trades, scanner, logs
+- Per-wallet isolation: position size, market exposure, daily loss, drawdown
+- Global kill switch, daily/weekly loss halt, order-rate cap
+- `enable_live_trading: false` in `apps/node/config.yaml` — all wallets PAPER
+
+### Quick start
+
+```bash
+cd apps/node
+npm install
+npm test
+npm run build
+npm start
+```
+
+Dashboard (when the engine is up): [http://localhost:3000/dashboard](http://localhost:3000/dashboard)
+
+```
+apps/node/src/
+  strategies/     arb, convergence, MM, momentum, AI, copy
+  whales/         scanner, scoring, alerts, sqlite
+  risk/           limits, kill switch
+  paper_trading/  fills, slippage, PnL
+  execution/      router, positions
+  reporting/      dashboard + SSE
+```
+
+Config knobs live in `apps/node/config.yaml` (`min_edge`, `min_dislocation`, `spread_bps`, copy-trade whale list, scanner batch size). Longer walkthrough: [apps/node/README.md](apps/node/README.md).
+
+---
+
+## Python paper engine (`src/vectorix_polymarket`)
 
 ```bash
 python -m venv .venv
@@ -62,28 +111,25 @@ src/vectorix_polymarket/
   config.py   env
 ```
 
-## TypeScript engine (`apps/node`)
+## Features (catalog)
 
-Multi-wallet Node bot: 8 strategies, whale scanner, risk engine, paper fills, optional dashboard.
+- Explosive growth of Polymarket with surging trading volume and new short-term markets
+  
+- Increasing dominance of automated bots and AI in 5-minute and 15-minute crypto prediction markets
+  
+- Higher profitability potential through advanced arbitrage and market-making strategies
+  
+- Stronger edge for Python-based bots with real-time orderbook intelligence and low-latency execution
+  
+- Continuous evolution of sniper, ladder, stair, momentum, and copy trading strategies
+  
+- Scalable daily profits as prediction markets move toward hundreds of billions in annual volume
+  
+- Full future-proof architecture for new features, contracts, and high-frequency trading environments
 
-```bash
-cd apps/node
-npm install
-npm test
-npm run dev
-```
+## Included Trading Bots
 
-`config.yaml` ships with `enable_live_trading: false`. Full notes: [apps/node/README.md](apps/node/README.md).
-
-```
-apps/node/src/
-  strategies/   arb, convergence, MM, momentum, AI, copy
-  whales/       scanner, scoring, alerts
-  risk/         limits, kill switch
-  paper_trading/
-  execution/
-  reporting/    dashboard
-```
+Designed for arbitrage, directional strategies, and ultra-short-term markets (including 5-minute and 15-minute rounds), this bot framework provides a robust foundation for building and scaling automated trading strategies on Polymarket .
 
 ## Documentation
 Notes and write-ups from building and running these systems, aimed at developers, traders, and researchers who want to understand prediction-market automation in practice.
