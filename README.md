@@ -2,6 +2,8 @@
 
 **Vectorix (`vectorix-cross`)** — research-backed automation for Polymarket CLOB markets. Two runnable engines in this repo, plus a documented strategy history from 5-minute crypto epochs through whale copy-trade and market-making.
 
+[Portfolio](https://github.com/vectorix-cross/portfolio) · [Slideshows](https://vectorix-cross.github.io/portfolio/#polymarket-trading-bot)
+
 <img width="1536" height="1024" alt="Vectorix Polymarket trading bot dashboard" src="docs/assets/vectorix-hero-dashboard.png" />
 
 | What you can run today | What this README also documents |
