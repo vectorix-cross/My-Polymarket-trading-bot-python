@@ -1,4 +1,6 @@
 # Vectorix Polymarket Trading Bot
+**Live portfolio:** [https://portfolio.vanjasretenovic4.workers.dev/](https://portfolio.vanjasretenovic4.workers.dev/)
+
 
 **Vectorix (`vectorix-cross`)** — research-backed automation for Polymarket CLOB markets. Two runnable engines in this repo, plus a documented strategy history from 5-minute crypto epochs through whale copy-trade and market-making.
 
